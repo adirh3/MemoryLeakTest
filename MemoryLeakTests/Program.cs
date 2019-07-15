@@ -15,8 +15,8 @@ namespace MemoryLeakTests
         public static extern bool EnumThreadWindows(int threadId, EnumWindowProc callback, IntPtr lParam);
         static void Main(string[] args)
         {
-            RunWithoutGCAlloc(); // This will leaks
-            RunWithGCAlloc(); // This will not leak
+            RunWithoutGCAlloc(); // This will leaks, Lets call this Option A
+            RunWithGCAlloc(); // This will not leak, Lets call this Option B
         }
 
         private static void RunWithoutGCAlloc()
